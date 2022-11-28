@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Banco réplica do erp da northwind.
+    schema: erp_northwind
+    tables:
+      - name: orders
+        description: Uma linha por pedido. Inclui pedidos cancelados e deletados.
+        columns:
+          - name: order_id
+            description: Chave primária da tabela de ordens.
+            tests:
+              - unique
+              - not_null
+      
+      - name: products
+        description: Tabela de catálogo de produtos.
+
+      - name: categories
+        description: Tabela de categorias de produtos.
+
+      - name: suppliers
+        description: Tabela de catálogo de fornecedores.
+
+      - name: shippers
+        description: Tabela de catálogo de transportadoras.
+
+#Para cada fonte que eu tiver no banco eu vou criar uma pasta dentro de staging. E para cada pasta nova preciso criar um arquivo source.yml para referenciar as tabelas brutas que vm, 
+#os testes que eu quero fazer e para qual schema elas vão. 
