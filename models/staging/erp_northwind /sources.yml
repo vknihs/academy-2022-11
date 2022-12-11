@@ -13,18 +13,27 @@ sources:
             tests:
               - unique
               - not_null
+        
+      - name: order_details
+        description: Detalhe de item linha para cada pedido da tabela orders.
       
       - name: products
-        description: Tabela de catálogo de produtos.
-
+        description: Tabela de catálogo de produtos comercializados na Northwind.
+      
       - name: categories
-        description: Tabela de categorias de produtos.
-
+        description: Tabela de categorias de produtos comercializados pela Northwind.
+      
       - name: suppliers
         description: Tabela de catálogo de fornecedores.
-
+      
       - name: shippers
         description: Tabela de catálogo de transportadoras.
+        
+      - name: employees
+        description: Tabela com informações dos funcionários da Northwind e seus gerentes.
+        
+      - name: customers
+        description: Tabela com informações dos clientes da Northwind.
 
 #Para cada fonte que eu tiver no banco eu vou criar uma pasta dentro de staging. E para cada pasta nova preciso criar um arquivo source.yml para referenciar as tabelas brutas que vm, 
 #os testes que eu quero fazer e para qual schema elas vão. 
